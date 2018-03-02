@@ -1,5 +1,5 @@
 import store from './store';
-import { GUESS_ADD } from './actions';
+import { guessAdd } from './actions';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -10,9 +10,10 @@ import './index.css';
 import Game from './components/game';
 
 console.log('INITIAL STATE:', store.getState());
-// store.dispatch(GUESS_ADD({guess: 0}));
 
-console.log(store.getState());
+store.dispatch(guessAdd({guess: 50}));
+
+console.log('NEW STATE:', store.getState());
 
 ReactDOM.render(
   <Game />,

@@ -2,10 +2,10 @@ import { GUESS_ADD} from '../actions';
 // GUESS_FEEDBACK, GUESS_STATUS, GUESS_CORRECTANSWER, GUESS_NAVIGATION
 
 const initalState = {
-  guesses: [],
-  feedback: 'Make your guess!',
-  auralStatus: '',
-  correctAnswer: Math.round(Math.random() * 100) + 1
+  guesses: []
+  // feedback: 'Make your guess!',
+  // auralStatus: '',
+  // correctAnswer: Math.round(Math.random() * 100) + 1
 }
 
 export const gameReducer = (state=initalState, action) => {
