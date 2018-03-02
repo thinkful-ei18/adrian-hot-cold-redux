@@ -9,7 +9,10 @@ import './index.css';
 
 import Game from './components/game';
 
-store.dispatch(GUESS_ADD({guess: 0}));
+console.log('INITIAL STATE:', store.getState());
+// store.dispatch(GUESS_ADD({guess: 0}));
+
+console.log(store.getState());
 
 ReactDOM.render(
   <Game />,
