@@ -1,5 +1,5 @@
 import store from './store';
-import { guessAdd } from './actions';
+import { guessAdd, restartGame } from './actions';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -11,7 +11,10 @@ import Game from './components/game';
 
 console.log('INITIAL STATE:', store.getState());
 
-store.dispatch(guessAdd({guess: 50}));
+store.dispatch(guessAdd(50));
+store.dispatch(guessAdd(23));
+store.dispatch(guessAdd(78));
+store.dispatch(restartGame(23));
 
 console.log('NEW STATE:', store.getState());
 
