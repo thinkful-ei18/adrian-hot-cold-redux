@@ -1,3 +1,5 @@
+import store from './store';
+// IMPORT ACTIONS!!!!
 import React from 'react';
 import ReactDOM from 'react-dom';
 
