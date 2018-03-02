@@ -1,7 +1,10 @@
 // IMPORT ACTIONS UP HERE!
 
 const initalState = {
-  guessHistory: []
+  guesses: [],
+  feedback: 'Make your guess!',
+  auralStatus: '',
+  correctAnswer: Math.round(Math.random() * 100) + 1
 }
 
 export const gameReducer = (state=initalState, action) => {
