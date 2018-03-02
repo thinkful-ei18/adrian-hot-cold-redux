@@ -1,4 +1,5 @@
-import { GUESS_ADD, GUESS_FEEDBACK, GUESS_STATUS, GUESS_CORRECTANSWER, GUESS_NAVIGATION } from '../actions';
+import { GUESS_ADD} from '../actions';
+// GUESS_FEEDBACK, GUESS_STATUS, GUESS_CORRECTANSWER, GUESS_NAVIGATION
 
 const initalState = {
   guesses: [],
