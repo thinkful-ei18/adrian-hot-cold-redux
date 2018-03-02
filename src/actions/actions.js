@@ -10,9 +10,6 @@ export const guessFeedback = guess => ({
   guess
 });
 
-
-
-
 export const GUESS_SECRET = 'GUESS_SECRET';
 export const guessSecret = guess => ({
   type: GUESS_SECRET,
