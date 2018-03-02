@@ -1,5 +1,5 @@
 import store from './store';
-import { GUESS_ADD } from '../actions';
+import { GUESS_ADD } from './actions';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
