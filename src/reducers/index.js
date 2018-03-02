@@ -1,4 +1,4 @@
-// IMPORT ACTIONS UP HERE!
+import { GUESS_ADD, GUESS_FEEDBACK, GUESS_STATUS, GUESS_CORRECTANSWER, GUESS_NAVIGATION } from '../actions';
 
 const initalState = {
   guesses: [],
