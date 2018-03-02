@@ -8,5 +8,12 @@ const initalState = {
 }
 
 export const gameReducer = (state=initalState, action) => {
+
+  if (action.type === GUESS_ADD) {
+    return Object.assign({}, state, {
+      items: [...state.guesses, action.item]
+    });
+  }
+
   return state;
-}
+};
