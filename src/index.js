@@ -1,5 +1,6 @@
 import store from './store';
-// IMPORT ACTIONS!!!!
+import { GUESS_ADD } from '../actions';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
