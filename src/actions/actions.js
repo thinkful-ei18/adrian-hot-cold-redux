@@ -10,6 +10,12 @@ export const guessFeedback = guess => ({
   guess
 });
 
+export const GUESS_STATUS = 'GUESS_STATUS';
+export const guessStatus = guess => ({
+  type: GUESS_STATUS,
+  guess
+});
+
 export const GUESS_SECRET = 'GUESS_SECRET';
 export const guessSecret = guess => ({
   type: GUESS_SECRET,
