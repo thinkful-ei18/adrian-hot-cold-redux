@@ -8,14 +8,6 @@ import { guessAdd, restartGame } from '../actions';
 
 export class Game extends React.Component {
 
-  restartGame() {
-    this.props.dispatch(restartGame());
-  }
-
-  makeGuess(guess) {
-  this.props.dispatch(guessAdd(guess));
-  }
-
   generateAuralUpdate() {
     const { guesses, feedback } = this.props;
 
@@ -42,9 +34,7 @@ export class Game extends React.Component {
         <Header
           onGenerateAuralUpdate={() => this.generateAuralUpdate()}/>
         <main role="main">
-          <GuessSection
-            onMakeGuess={guess => this.makeGuess(guess)}
-          />
+          <GuessSection/>
           <StatusSection guesses={guesses}
             auralStatus={auralStatus}
           />
