@@ -3,8 +3,9 @@ import Header from './header';
 import GuessSection from './guess-section';
 import StatusSection from './status-section';
 import InfoSection from './info-section';
+import { connect } from 'react-redux';
 
-export default class Game extends React.Component {
+export class Game extends React.Component {
   // 1. delete this.state
   // 2. change references to this.state to redux store
   // 3. use connect method from redux
@@ -106,3 +107,12 @@ export default class Game extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  guesses: state.guesses,
+  feedback: state.feedback,
+  // auralStatus: '',
+  correctAnswer: state.correctAnswer
+});
+
+export default connect(mapStateToProps)(Game);
