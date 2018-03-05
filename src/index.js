@@ -3,6 +3,7 @@ import { guessAdd, restartGame } from './actions';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
 import './reset.css';
 import './index.css';
@@ -20,6 +21,8 @@ store.dispatch(restartGame(23));
 console.log('NEW STATE:', store.getState());
 
 ReactDOM.render(
-  <Game />,
+  <Provider store={store}>
+  <Game />
+  </Provider>,
   document.getElementById('root')
 );
