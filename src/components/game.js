@@ -1,11 +1,16 @@
 import React from 'react';
-
 import Header from './header';
 import GuessSection from './guess-section';
 import StatusSection from './status-section';
 import InfoSection from './info-section';
 
 export default class Game extends React.Component {
+  // 1. delete this.state
+  // 2. change references to this.state to redux store
+  // 3. use connect method from redux
+  // class Game will become "export default connect(game)"
+  // 4. components will update based on changes to the state
+  // .map state to props
   constructor(props) {
     super(props);
     this.state = {
@@ -92,7 +97,7 @@ export default class Game extends React.Component {
             guessCount={guessCount}
             onMakeGuess={guess => this.makeGuess(guess)}
           />
-          <StatusSection guesses={guesses} 
+          <StatusSection guesses={guesses}
             auralStatus={auralStatus}
           />
           <InfoSection />
