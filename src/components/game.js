@@ -43,8 +43,6 @@ export class Game extends React.Component {
           onGenerateAuralUpdate={() => this.generateAuralUpdate()}/>
         <main role="main">
           <GuessSection
-            feedback={feedback}
-            guessCount={guessCount}
             onMakeGuess={guess => this.makeGuess(guess)}
           />
           <StatusSection guesses={guesses}

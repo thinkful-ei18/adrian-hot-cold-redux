@@ -5,14 +5,20 @@ import GuessForm from './guess-form';
 
 import { connect } from 'react-redux';
 
-export default function GuessSection(props) {
-  const { feedback, guessCount } = props;
+function GuessSection(props) {
+
   return (
     <section aria-label="Guess section" aria-describedby="feedback">
-      <Feedback feedback={feedback} guessCount={guessCount} />
+      <Feedback feedback={props.feedback} guessCount={props.guesses.length} />
       <GuessForm onMakeGuess={guess => props.onMakeGuess(guess)} />
     </section>
   );
 }
 
 
+const mapStateToProps = state => ({
+  guesses: state.guesses,
+  feedback: state.feedback
+});
+
+export default connect(mapStateToProps)(GuessSection);
