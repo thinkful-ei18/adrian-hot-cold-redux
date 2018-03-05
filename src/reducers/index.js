@@ -13,6 +13,12 @@ export const gameReducer = (state=initalState, action) => {
 
   if (action.type === GUESS_ADD) {
 
+    if (isNaN(action.guess)) {
+      return Object.assign({}, state, {
+        feedback: 'Please enter a valid number'
+      });
+    }
+
     // do some math for feedback string
     const difference = Math.abs(action.guess - state.correctAnswer);
 
