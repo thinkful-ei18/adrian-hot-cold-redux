@@ -35,9 +35,7 @@ export class Game extends React.Component {
           onGenerateAuralUpdate={() => this.generateAuralUpdate()}/>
         <main role="main">
           <GuessSection/>
-          <StatusSection guesses={guesses}
-            auralStatus={auralStatus}
-          />
+          <StatusSection />
           <InfoSection />
         </main>
       </div>
