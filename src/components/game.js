@@ -19,8 +19,6 @@ export default class Game extends React.Component {
       auralStatus += ` ${pluralize ? 'In order of most- to least-recent, they are' : 'It was'}: ${guesses.reverse().join(', ')}`;
     }
 
-
-    this.setState({ auralStatus });
   }
 
   render() {
