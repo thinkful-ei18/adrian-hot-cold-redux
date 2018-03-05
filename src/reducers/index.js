@@ -1,4 +1,4 @@
-import { GUESS_ADD, RESTART_GAME, UPDATE_AURALSTATUS} from '../actions';
+import { ADD_GUESS, RESTART_GAME, UPDATE_AURALSTATUS} from '../actions';
 // GUESS_FEEDBACK, GUESS_STATUS, GUESS_CORRECTANSWER, GUESS_NAVIGATION
 
 const initalState = {
@@ -10,7 +10,7 @@ const initalState = {
 
 export const gameReducer = (state=initalState, action) => {
 
-  if (action.type === GUESS_ADD) {
+  if (action.type === ADD_GUESS) {
 
     let guess = parseInt(action.guess, 10);
 

@@ -1,7 +1,7 @@
 // adds a guess to guess history
-export const GUESS_ADD = 'GUESS_ADD';
-export const guessAdd = guess => ({
-  type: GUESS_ADD,
+export const ADD_GUESS = 'ADD_GUESS';
+export const addGuess = guess => ({
+  type: ADD_GUESS,
   guess
 });
 
