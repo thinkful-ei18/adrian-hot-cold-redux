@@ -4,6 +4,7 @@ import GuessSection from './guess-section';
 import StatusSection from './status-section';
 import InfoSection from './info-section';
 import { connect } from 'react-redux';
+import { guessAdd, restartGame } from '../actions';
 
 export class Game extends React.Component {
   // 1. delete this.state
@@ -12,6 +13,7 @@ export class Game extends React.Component {
   // class Game will become "export default connect(game)"
   // 4. components will update based on changes to the state
   // .map state to props
+
   constructor(props) {
     super(props);
     this.state = {
@@ -23,18 +25,13 @@ export class Game extends React.Component {
   }
 
   restartGame() {
-    this.setState({
-      guesses: [],
-      feedback: 'Make your guess!',
-      auralStatus: '',
-      correctAnswer: Math.floor(Math.random() * 100) + 1
-    });
+    this.props.dispatch(restartGame());
   }
 
   makeGuess(guess) {
     guess = parseInt(guess, 10);
     if (isNaN(guess)) {
-      this.setState({ feedback: 'Please enter a valid number' });
+      this.props.dispatch(guessAdd({feedback: 'Please enter a valid number'}));
       return;
     }
 

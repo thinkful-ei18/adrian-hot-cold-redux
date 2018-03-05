@@ -12,6 +12,7 @@ import Game from './components/game';
 
 // console.log('INITIAL STATE:', store.getState());
 
+// store.dispatch(guessAdd('This is not a number!'))
 // store.dispatch(guessAdd(50));
 // store.dispatch(guessAdd(23));
 // store.dispatch(guessAdd(78));
