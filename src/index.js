@@ -11,12 +11,13 @@ import './index.css';
 import Game from './components/game';
 
 // console.log('INITIAL STATE:', store.getState());
-// store.dispatch(guessAdd({feedback: 'Please enter a valid number'}));
+// // store.dispatch(guessAdd({feedback: 'Please enter a valid number'}));
 // store.dispatch(guessAdd(50));
-// store.dispatch(guessAdd(23));
 // store.dispatch(guessAdd(78));
+
 // console.log(store.getState());
-// store.dispatch(restartGame(23));
+
+// store.dispatch(restartGame());
 // console.log('NEW STATE:', store.getState());
 
 ReactDOM.render(
