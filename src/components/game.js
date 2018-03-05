@@ -14,15 +14,15 @@ export class Game extends React.Component {
   // 4. components will update based on changes to the state
   // .map state to props
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      guesses: [],
-      feedback: 'Make your guess!',
-      auralStatus: '',
-      correctAnswer: Math.round(Math.random() * 100) + 1
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     guesses: [],
+  //     feedback: 'Make your guess!',
+  //     auralStatus: '',
+  //     correctAnswer: Math.round(Math.random() * 100) + 1
+  //   };
+  // }
 
   restartGame() {
     this.props.dispatch(restartGame());
