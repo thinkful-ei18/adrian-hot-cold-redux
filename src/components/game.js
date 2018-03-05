@@ -3,7 +3,6 @@ import Header from './header';
 import GuessSection from './guess-section';
 import StatusSection from './status-section';
 import InfoSection from './info-section';
-// import { connect } from 'react-redux';
 
 export default class Game extends React.Component {
 
@@ -39,12 +38,3 @@ export default class Game extends React.Component {
     );
   }
 }
-
-// const mapStateToProps = state => ({
-//   guesses: state.guesses,
-//   feedback: state.feedback,
-//   auralStatus: '',
-//   correctAnswer: state.correctAnswer
-// });
-
-// export default connect()(Game);
