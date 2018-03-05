@@ -30,11 +30,14 @@ export class Game extends React.Component {
 
   makeGuess(guess) {
     // THIS VALIDATION HAS BEEN ADDED TO THE REDUCER!
+
+    this.props.dispatch(guessAdd(guess));
     guess = parseInt(guess, 10);
-    if (isNaN(guess)) {
-      this.props.dispatch(guessAdd({feedback: 'Please enter a valid number'}));
-      return;
-    }
+
+    // if (isNaN(guess)) {
+    //   this.props.dispatch(guessAdd({feedback: 'Please enter a valid number'}));
+    //   return;
+    // }
 
     const difference = Math.abs(guess - this.state.correctAnswer);
 
