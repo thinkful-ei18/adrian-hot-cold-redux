@@ -11,3 +11,9 @@ export const restartGame = correctAnswer => ({
   type: RESTART_GAME,
   correctAnswer
 });
+
+export const UPDATE_AURALSTATUS = 'UPDATE_AURALSTATUS';
+export const updateAuralStatus = auralStatus => ({
+  type: UPDATE_AURALSTATUS,
+  auralStatus
+});
