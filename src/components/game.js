@@ -4,7 +4,6 @@ import GuessSection from './guess-section';
 import StatusSection from './status-section';
 import InfoSection from './info-section';
 import { connect } from 'react-redux';
-import { guessAdd, restartGame } from '../actions';
 
 export class Game extends React.Component {
 
@@ -26,7 +25,6 @@ export class Game extends React.Component {
   }
 
   render() {
-
 
     return (
       <div>
