@@ -25,8 +25,7 @@ export default class Game extends React.Component {
 
     return (
       <div>
-        <Header
-          onGenerateAuralUpdate={() => this.generateAuralUpdate()}/>
+        <Header />
         <main role="main">
           <GuessSection/>
           <StatusSection />
