@@ -4,12 +4,11 @@ import { GUESS_ADD, RESTART_GAME} from '../actions';
 const initalState = {
   guesses: [],
   feedback: 'Make your guess!',
-  // auralStatus: '',
+  auralStatus: '',
   correctAnswer: Math.round(Math.random() * 100) + 1
 }
 
 export const gameReducer = (state=initalState, action) => {
-
 
   if (action.type === GUESS_ADD) {
 

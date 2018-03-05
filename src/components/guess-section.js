@@ -3,6 +3,8 @@ import React from 'react';
 import Feedback from './feedback';
 import GuessForm from './guess-form';
 
+import { connect } from 'react-redux';
+
 export default function GuessSection(props) {
   const { feedback, guessCount } = props;
   return (
@@ -12,3 +14,5 @@ export default function GuessSection(props) {
     </section>
   );
 }
+
+
