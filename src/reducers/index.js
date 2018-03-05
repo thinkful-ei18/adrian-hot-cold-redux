@@ -1,4 +1,4 @@
-import { GUESS_ADD, RESTART_GAME} from '../actions';
+import { GUESS_ADD, RESTART_GAME, UPDATE_AURALSTATUS} from '../actions';
 // GUESS_FEEDBACK, GUESS_STATUS, GUESS_CORRECTANSWER, GUESS_NAVIGATION
 
 const initalState = {
@@ -50,6 +50,10 @@ export const gameReducer = (state=initalState, action) => {
       guesses: [],
       feedback: 'Make your guess... again!'
     });
+  }
+
+  if (action.type === UPDATE_AURALSTATUS) {
+
   }
 
   return state;
